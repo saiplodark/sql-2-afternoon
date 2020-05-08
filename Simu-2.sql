@@ -9,9 +9,5 @@ SELECT * FROM orders;
 SELECT SUM(price)
 FROM orders o
 JOIN products p ON p.product_id = o.product_id  
-WHERE o.order_number = 1;
+WHERE order_number = $1;
 
-SELECT SUM(price)
-FROM orders o
-JOIN products p ON p.product_id = o.product_id  
-WHERE order_number = 1;
